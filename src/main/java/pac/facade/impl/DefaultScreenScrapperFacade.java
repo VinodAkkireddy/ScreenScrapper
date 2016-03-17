@@ -14,7 +14,6 @@ import pac.data.Product;
 import pac.data.Results;
 import pac.facade.ScreenScrapperFacade;
 import pac.service.ScreenScrapperService;
-import pac.service.impl.DefaultScreenScrapperService;
 
 /**
  * Implementation class for ScreenScrapperFacades.
@@ -56,7 +55,7 @@ public class DefaultScreenScrapperFacade implements ScreenScrapperFacade {
 		List<Document> documents = service.getDocuments(url);
 		
 		if(documents.isEmpty()){
-			return "Sorry problem in processing data";
+			return "Sorry problem in retrieving data";
 		}
 		List<Product> products = documents.stream().map(document -> productDataBuilder.build(document))
 				.collect(Collectors.toList());
@@ -65,7 +64,7 @@ public class DefaultScreenScrapperFacade implements ScreenScrapperFacade {
 		try {
 			return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(results);
 		} catch (IOException e) {
-			return "Sorry problem in processing data";
+			return "Sorry problem in processing json response";
 		}
 	}
 	
