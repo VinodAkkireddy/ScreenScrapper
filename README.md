@@ -1,7 +1,7 @@
 # ScreenScrapper
 Java Console application to ScreenScrape a web page
 
-This application has 3 layess
+This application has 3 layers
 
 Service Layer - Package : pac.service:
 Responsible for connecting to web page and retrieve the content - Used Jsoup library to retrieve content as Documents.
