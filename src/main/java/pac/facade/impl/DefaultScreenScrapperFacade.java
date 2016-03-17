@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jsoup.nodes.Document;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.jsoup.nodes.Document;
 
 import pac.builder.ProductsDataBuilder;
 import pac.builder.ResultsDataBuilder;
 import pac.data.Product;
 import pac.data.Results;
 import pac.facade.ScreenScrapperFacade;
+import pac.service.ScreenScrapperService;
 import pac.service.impl.DefaultScreenScrapperService;
 
 /**
@@ -24,7 +25,7 @@ import pac.service.impl.DefaultScreenScrapperService;
 public class DefaultScreenScrapperFacade implements ScreenScrapperFacade {
 
 	// dependancies
-	private DefaultScreenScrapperService service;
+	private ScreenScrapperService service;
 
 	private ProductsDataBuilder productDataBuilder;
 
@@ -68,11 +69,11 @@ public class DefaultScreenScrapperFacade implements ScreenScrapperFacade {
 		}
 	}
 	
-	public DefaultScreenScrapperService getService() {
+	public ScreenScrapperService getService() {
 		return service;
 	}
 
-	public void setService(DefaultScreenScrapperService service) {
+	public void setService(ScreenScrapperService service) {
 		this.service = service;
 	}
 
