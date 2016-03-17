@@ -10,10 +10,10 @@ Builder layer - Package : pac.builder
 Responsible for Converting/Populating Jsoup Document objects as POJOs
 
 Facade layer - Package : pac.facade
-Responsible for orchestrating the process, 
-/**
-	 * Following process is carried out in this method
-	 * 
+Responsible for orchestrating the process. 
+ 
+ Following process is carried out 
+	  
 	 * Step 1: Get List of Jsoup Document objects from service layer representing the products on web page.
 	 * 
 	 * Step 2: Convert/Populate List of Documents objects to List of Product data objects - Uses ProductDataBuilder
